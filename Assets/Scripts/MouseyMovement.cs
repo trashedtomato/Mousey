@@ -1,3 +1,4 @@
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,6 +21,7 @@ public class MouseyMovement : MonoBehaviour
     {
         GetInputs();
     }
+
     private void FixedUpdate()
     {
         if (mMovementAction.IsPressed())
@@ -28,7 +30,7 @@ public class MouseyMovement : MonoBehaviour
         }
     }
 
-    void Movement()
+    private void Movement()
     {
         //Vector3 wantedPosition = transform.position + (transform.forward * mMovement.y * moveSpeed * Time.deltaTime);
         //rb.MovePosition(wantedPosition);
@@ -39,7 +41,7 @@ public class MouseyMovement : MonoBehaviour
         rb.MoveRotation(wantedRotation);
     }
 
-    void GetInputs()
+    private void GetInputs()
     {
         mMovement = mMovementAction.ReadValue<Vector2>();
     }

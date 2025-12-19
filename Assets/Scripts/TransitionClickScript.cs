@@ -19,7 +19,7 @@ public class TransitionClickScript : ClickableClass
         col.enabled = false;
     }
 
-    private void LeaveComputer()
+    public void LeaveComputer()
     {
         col.enabled = true;
     }
