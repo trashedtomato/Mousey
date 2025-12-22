@@ -24,7 +24,7 @@ public class CursorController : MonoBehaviour
 
     private void OnDisable()
     {
-        controls.Disable();
+        controls.Office.Disable();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
